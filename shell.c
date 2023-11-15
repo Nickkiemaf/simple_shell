@@ -4,7 +4,7 @@
  * @argc: argument count
  * @argv: argument variable, gets the name of shell program
  * @env: environment variable
- * 
+ *
  * Return: Always 0 (Success), my Shell is perfect
  */
 int main(int argc, char **argv)
@@ -15,7 +15,9 @@ int main(int argc, char **argv)
 	char *token[11];
 	/*char **envp;*/
 	char *prg = argv[0];
+
 	buff = 0;
+
 	(void)argc;
 
 	while (true)
@@ -32,9 +34,9 @@ int main(int argc, char **argv)
 		}
 		if (numb == EOF)
 		{
-				free(address);
-				exit(EXIT_SUCCESS);
-				/*mathail_print("\n");*/
+			free(address);
+			exit(EXIT_SUCCESS);
+			/*mathail_print("\n");*/
 		}
 		/*tokenize the input command*/
 		mathail_token(address, token);
@@ -43,12 +45,8 @@ int main(int argc, char **argv)
 			continue;
 
 		excve_command(token, prg);
-
-		/*mikail_env(argc, address, env);*/
-
 		err_msg(prg, NULL, 0);
-
 	}
 	free(address);
-	return 0;
+	return (0);
 }

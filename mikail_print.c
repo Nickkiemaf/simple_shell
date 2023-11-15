@@ -2,8 +2,7 @@
 /**
  * mathail_print - function to print funtion terminal
  * @jb_strings: inputs from the terminal
- * 
-*/
+ */
 void mathail_print(char *jb_strings)
 {
 	int len;
@@ -13,3 +12,4 @@ void mathail_print(char *jb_strings)
 		len++;
 	write(STDOUT_FILENO, jb_strings, len);
 }
+

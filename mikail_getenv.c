@@ -5,21 +5,22 @@
  * @address: Input
  * Return: Environ if successful else NULL
  */
- char *my_getenv(char *address)
- {
+char *my_getenv(char *address)
+{
 	int i = 0;
+	int a = my_strlen(address);
+
 	while (environ[i])
 	{
-		if (_strncmp(address, environ[i], my_strlen(address)) == 0 && environ[i][my_strlen(address)] == '=')
+		if (_strncmp(address, environ[i], a) == 0 && environ[i][a] == '=')
 		{
-			return(environ[i] + my_strlen(address));
+			return (environ[i] + my_strlen(address));
 		}
 		i++;
 	}
 
-	return(NULL);
-
- }
+	return (NULL);
+}
 
 /**
  * _strncmp - Compares input with a specified length of string.
@@ -29,6 +30,7 @@
  * @num: Length or size of string
  * Return: Always 0 if successful
  */
+
 int _strncmp(const char *destination, char *source, int num)
 {
 	while (num && *destination == *source)
@@ -42,3 +44,4 @@ int _strncmp(const char *destination, char *source, int num)
 
 	return (0);
 }
+

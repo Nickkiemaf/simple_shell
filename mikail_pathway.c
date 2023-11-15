@@ -19,7 +19,7 @@ char *path_address(char *my_path, char *input)
 		my_strcat(file_path, "/");
 		my_strcat(file_path, input);
 		my_strcat(file_path, "\0");
-		
+
 		if (access(file_path, X_OK) == 0)
 		{
 			return (file_path);
@@ -32,14 +32,15 @@ char *path_address(char *my_path, char *input)
 }
 
 /*
-*get_path: function to get the path
-* @input: variable to be accepted
-*return: Null
-*/
+ *get_path: function to get the path
+ * @input: variable to be accepted
+ *return: Null
+ */
 
 char *get_path(char *input)
 {
 	char *my_path, *fresh_path;
+
 	my_path = my_getenv("PATH");
 
 	if (my_path)
@@ -49,3 +50,4 @@ char *get_path(char *input)
 	}
 	return (NULL);
 }
+
