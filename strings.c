@@ -67,7 +67,7 @@ char *my_strdup(char *str)
 		my_strcpy(duplicate, str);
 	}
 
-	return (diuplicate);
+	return (duplicate);
 	free(str);
 }
 

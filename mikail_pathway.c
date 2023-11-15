@@ -23,11 +23,12 @@ char *path_address(char *my_path, char *input)
 		if (access(file_path, X_OK) == 0)
 		{
 			return (file_path);
+			free(path_copy);		
 			free(file_path);
 		}
 		token_path = tokenize(NULL, ":");
 	}
-	free(my_path);
+	free(token_path);
 	free(file_path);
 	return (NULL);
 }
