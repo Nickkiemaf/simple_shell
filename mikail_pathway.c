@@ -27,6 +27,7 @@ char *path_address(char *my_path, char *input)
 		}
 		token_path = tokenize(NULL, ":");
 	}
+	free(my_path);
 	free(file_path);
 	return (NULL);
 }
